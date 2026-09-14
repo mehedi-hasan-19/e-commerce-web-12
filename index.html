@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Fashion | Elevate Your Style</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo" onclick="showHomePage()" style="cursor:pointer;">Rakib<span>.</span></div>
+        <nav>
+            <a href="#" onclick="showShopPage()">Men</a>
+            <a href="#" onclick="showShopPage()">Women</a>
+            <a href="#" onclick="showShopPage()">Collections</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="far fa-heart"></i>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HOME PAGE SECTIONS ================= -->
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Everyday Style</h1>
+            <p>Timeless pieces with a modern attitude. Experience premium quality.</p>
+            <button class="btn-primary" onclick="showShopPage()">SHOP THE COLLECTION</button>
+        </div>
+    </section>
+
+    <!-- Shop / New Arrivals -->
+    <section class="shop-section">
+        <h2 class="section-title">New Arrivals</h2>
+        <div class="product-grid" id="product-grid">
+            <!-- Products will be injected here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories-section">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category-card" onclick="showShopPage()">
+                <img src="images/image_1788762523857.jpg" alt="T-Shirts">
+                <div class="category-name">T-Shirts</div>
+            </div>
+            <div class="category-card" onclick="showShopPage()">
+                <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=800" alt="Shirts">
+                <div class="category-name">Shirts</div>
+            </div>
+            <div class="category-card" onclick="showShopPage()">
+                <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800" alt="Pants">
+                <div class="category-name">Pants</div>
+            </div>
+            <div class="category-card" onclick="showShopPage()">
+                <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=800" alt="Hoodies">
+                <div class="category-name">Hoodies</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Banner -->
+    <section class="collection-banner">
+        <div class="banner-content">
+            <h2>THE ESSENTIAL COLLECTION</h2>
+            <p>Timeless pieces. Modern attitude.</p>
+            <button class="btn-primary" onclick="showShopPage()">EXPLORE NOW</button>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features-section">
+        <div class="feature-box">
+            <i class="fas fa-gem"></i>
+            <h3>Premium Quality</h3>
+            <p>Crafted with the finest materials</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-truck-fast"></i>
+            <h3>Fast Delivery</h3>
+            <p>Express shipping nationwide</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-undo"></i>
+            <h3>Easy Returns</h3>
+            <p>14-day hassle-free return policy</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Secure Payment</h3>
+            <p>100% safe & encrypted checkout</p>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews-section">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"The oversized t-shirt fits perfectly. The material feels very premium and comfortable. Highly recommended!"</p>
+                <h4>- Rakib H.</h4>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Fast delivery and the packaging was pure luxury. The linen shirt is my new favorite piece for summer."</p>
+                <h4>- Tanvir A.</h4>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Customer service is top-notch. I had to exchange a size and they handled it smoothly. Great brand!"</p>
+                <h4>- Shafiq R.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram / Social Section -->
+    <section class="instagram-section">
+        <h2 class="section-title" style="margin-bottom: 10px;">FOLLOW US @MEHEDI_STUDIO</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Tag us to get featured</p>
+        <div class="insta-grid">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=500" alt="Insta 1">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=500" alt="Insta 2">
+            <img src="https://images.unsplash.com/photo-1509631179647-0c37cb537504?q=80&w=500" alt="Insta 3">
+            <img src="https://images.unsplash.com/photo-1485230895905-ef05f6bf0b99?q=80&w=500" alt="Insta 4">
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <h2>Get 10% OFF your first order</h2>
+        <p>Subscribe to our newsletter for exclusive offers, new drops, and fashion tips.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn-primary">SUBSCRIBE</button>
+        </form>
+    </section>
+
+    <!-- ================= 2. SHOP PAGE ================= -->
+    <section class="shop-page" id="shop-page" style="display: none;">
+        <div class="shop-layout">
+            <!-- Sidebar Filters -->
+            <aside class="shop-sidebar">
+                <h3>Filters</h3>
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox"> T-Shirts</label>
+                    <label><input type="checkbox"> Shirts</label>
+                    <label><input type="checkbox"> Pants</label>
+                    <label><input type="checkbox"> Hoodies</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Size</h4>
+                    <div class="size-filters">
+                        <span>S</span> <span>M</span> <span>L</span> <span>XL</span> <span>XXL</span>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h4>Color</h4>
+                    <div class="color-filters">
+                        <div class="color-dot" style="background: #000;"></div>
+                        <div class="color-dot" style="background: #fff; border: 1px solid #ccc;"></div>
+                        <div class="color-dot" style="background: #1C2833;"></div>
+                        <div class="color-dot" style="background: #C5A880;"></div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <label><input type="radio" name="price"> ৳500 - ৳1,000</label>
+                    <label><input type="radio" name="price"> ৳1,000 - ৳2,000</label>
+                    <label><input type="radio" name="price"> ৳2,000+</label>
+                </div>
+            </aside>
+
+            <!-- Shop Products -->
+            <div class="shop-products-container">
+                <div class="shop-header">
+                    <h2>All Products</h2>
+                    <select class="sort-select">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+                <div class="product-grid" id="all-products-grid">
+                    <!-- Products will be injected here via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 3. PRODUCT DETAILS PAGE ================= -->
+    <section class="product-details-page" id="product-details-page" style="display: none;">
+        <button class="back-btn" onclick="showHomePage()"><i class="fas fa-arrow-left"></i> Back</button>
+        <div class="details-layout">
+            <!-- Left: Image Gallery -->
+            <div class="product-gallery">
+                <div class="thumbnail-list">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=2000" alt="Thumb" class="active">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=800" alt="Thumb">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=800" alt="Thumb">
+                </div>
+                <div class="main-image">
+                    <img id="main-product-img" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=2000" alt="Main Product">
+                </div>
+            </div>
+
+            <!-- Right: Product Info -->
+            <div class="product-info">
+                <div class="breadcrumbs">Home / Men / Product</div>
+                <h1 id="detail-title">Premium Oversized T-Shirt</h1>
+                <div class="reviews">★★★★★ <span>4.8 (124 Reviews)</span></div>
+                
+                <div class="price-box">
+                    <span class="current-price" id="detail-price">৳1,290</span>
+                    <span class="old-price">৳1,590</span>
+                    <span class="discount">19% OFF</span>
+                </div>
+
+                <div class="selection-group">
+                    <h4>Color</h4>
+                    <div class="color-filters">
+                        <div class="color-dot active-dot" style="background: #000;"></div>
+                        <div class="color-dot" style="background: #fff; border: 1px solid #ccc;"></div>
+                        <div class="color-dot" style="background: #C5A880;"></div>
+                    </div>
+                </div>
+
+                <div class="selection-group">
+                    <div class="size-header">
+                        <h4>Size</h4>
+                        <span class="size-guide-link">Size Guide</span>
+                    </div>
+                    <div class="size-filters">
+                        <span>S</span> <span class="active-size">M</span> <span>L</span> <span>XL</span> <span>XXL</span>
+                    </div>
+                </div>
+
+                <div class="selection-group">
+                    <h4>Quantity</h4>
+                    <div class="qty-selector">
+                        <button>-</button>
+                        <input type="number" value="1" min="1" max="10" readonly>
+                        <button>+</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn-secondary w-100" onclick="addToCartFromDetails()">ADD TO CART</button>
+                    <button class="btn-primary w-100" onclick="buyNowFromDetails()">BUY NOW</button>
+                </div>
+
+                <div class="trust-badges">
+                    <p><i class="fas fa-truck"></i> Free Delivery over ৳5,000</p>
+                    <p><i class="fas fa-undo"></i> 14-Day Easy Return</p>
+                    <p><i class="fas fa-shield-alt"></i> Secure Payment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer-section">
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <div class="logo">MEHEDI<span>.</span></div>
+                <p>Elevating everyday style with premium quality, modern designs, and timeless aesthetics.</p>
+                <div class="social-links">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-tiktok"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Shop</h3>
+                <a href="#" onclick="showShopPage()">Men's Clothing</a>
+                <a href="#" onclick="showShopPage()">Women's Clothing</a>
+                <a href="#" onclick="showShopPage()">New Arrivals</a>
+            </div>
+            <div class="footer-col">
+                <h3>Help</h3>
+                <a href="#">FAQ</a>
+                <a href="#">Shipping & Delivery</a>
+                <a href="#">Returns & Exchanges</a>
+                <a href="#">Size Guide</a>
+            </div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MEHEDI Fashion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ================= MODALS & OVERLAYS ================= -->
+    
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <i class="fas fa-times" onclick="toggleCart()" style="cursor:pointer;"></i>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will appear here -->
+        </div>
+        <div class="cart-footer">
+            <div class="summary">
+                <span>Subtotal:</span>
+                <span id="cart-total">৳0</span>
+            </div>
+            <button class="btn-primary w-100" onclick="openCheckout()">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="checkout-content">
+            <span class="close-btn" onclick="closeCheckout()">&times;</span>
+            <h2>Secure Checkout</h2>
+            <form id="checkout-form">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <textarea id="address" placeholder="Full Delivery Address" required></textarea>
+                
+                <h3>Payment Method</h3>
+                <div class="payment-methods">
+                    <label><input type="radio" name="payment" value="bKash" required> bKash</label>
+                    <label><input type="radio" name="payment" value="Nagad"> Nagad</label>
+                    <label><input type="radio" name="payment" value="COD" checked> Cash on Delivery</label>
+                </div>
+                
+                <div class="checkout-total">
+                    <strong>Grand Total: <span id="checkout-grand-total">৳0</span></strong>
+                    <small>(Includes ৳100 Delivery Charge)</small>
+                </div>
+                <button type="submit" class="btn-primary w-100">PLACE ORDER</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Success Message -->
+    <div id="success-message" class="success-message">
+        <i class="fas fa-check-circle"></i>
+        <h2>Thank You For Your Order!</h2>
+        <p>Your order #<span id="order-id"></span> has been placed successfully.</p>
+        <button class="btn-primary" onclick="closeSuccess()">Continue Shopping</button>
+    </div>
+
+    <!-- JavaScript File Linking -->
+    <script src="script.js"></script>
+</body>
+</html>
